@@ -4,9 +4,117 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MercaLocal</title>
+    
+    <!-- Fuentes de Google para un look más profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Reset básico para limpiar márgenes por defecto */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      /* Estilos del Encabezado */
+      .main-header {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      /* Logo / Nombre de la marca */
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #10b981; /* Un verde fresco tipo mercado/local */
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+
+      .logo:hover {
+        transform: scale(1.03);
+      }
+
+      /* Menú de navegación */
+      .nav-menu ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: #4b5563;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: color 0.2s, border-bottom 0.2s;
+        padding: 0.5rem 0;
+      }
+
+      /* Efecto al pasar el cursor */
+      .nav-link:hover {
+        color: #10b981;
+      }
+
+      /* Botón de llamada a la acción (opcional, estilo moderno) */
+      .btn-contacto {
+        background-color: #10b981;
+        color: white !important;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background-color 0.2s, transform 0.2s;
+      }
+
+      .btn-contacto:hover {
+        background-color: #059669;
+        transform: translateY(-1px);
+      }
+
+      /* Responsivo: diseño para celulares */
+      @media (max-width: 768px) {
+        .main-header {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem;
+        }
+        .nav-menu ul {
+          gap: 1.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    
+    <!-- Encabezado Estilizado -->
+    <header class="main-header">
+      <a href="#" class="logo">🌿 MercaLocal</a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#contacto" class="nav-link btn-contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenedor principal para tu JavaScript -->
     <div id="app"></div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
