@@ -1,6 +1,7 @@
 const { sequelize } = require("../config/database");
 const Sucursal = require("./Sucursal");
 const Usuario = require("./Usuario");
+const Producto = require("./Producto");
 
 /**
  * Punto único de exportación de modelos + utilidad de sincronización.
@@ -18,3 +19,4 @@ async function conectarBaseDeDatos() {
 }
 
 module.exports = { sequelize, Sucursal, Usuario, conectarBaseDeDatos };
+module.exports = { sequelize, Sucursal, Usuario, Producto, conectarBaseDeDatos };
