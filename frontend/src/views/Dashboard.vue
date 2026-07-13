@@ -15,6 +15,7 @@
         ventas y reportes (Sprints 2 a 4) se integrarán aquí como nuevas
         rutas protegidas del router.
       </p>
+      <RouterLink to="/productos" class="link-modulo">Ir a Inventario →</RouterLink>
     </main>
   </div>
 </template>
