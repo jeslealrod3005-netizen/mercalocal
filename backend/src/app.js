@@ -17,6 +17,14 @@ app.get("/api/health", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/usuarios", usuarioRoutes);
 
+
+// Importar rutas de ventas
+const ventasRoutes = require('./routes/ventas');
+
+// Usar rutas de ventas
+app.use('/api/ventas', ventasRoutes);
+
+
 // Middleware de errores: SIEMPRE al final de la cadena
 app.use(manejadorErrores);
 
