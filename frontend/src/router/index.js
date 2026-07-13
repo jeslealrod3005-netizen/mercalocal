@@ -3,6 +3,7 @@ import { useAuthStore } from "../stores/auth.store";
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
 import Productos from "../views/Productos.vue";
+import Ventas from "../views/Ventas.vue";
 
 const routes = [
   { path: "/", redirect: "/login" },
@@ -14,6 +15,7 @@ const routes = [
     meta: { requiereAuth: true },
   },
   { path: "/productos", name: "productos", component: Productos, meta: { requiereAuth: true } },
+  { path: "/ventas", name: "ventas", component: Ventas, meta: { requiereAuth: true } },
 ];
 
 const router = createRouter({
@@ -21,7 +23,6 @@ const router = createRouter({
   routes,
 });
 
-// Guard de navegación: protege rutas que requieren sesión iniciada
 router.beforeEach((to) => {
   const auth = useAuthStore();
   if (to.meta.requiereAuth && !auth.estaAutenticado) {

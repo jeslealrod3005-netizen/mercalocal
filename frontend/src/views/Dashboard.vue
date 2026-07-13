@@ -16,6 +16,7 @@
         rutas protegidas del router.
       </p>
       <RouterLink to="/productos" class="link-modulo">Ir a Inventario →</RouterLink>
+      <RouterLink to="/ventas" class="link-modulo" style="margin-left: 1rem;">Ir a Ventas →</RouterLink>
     </main>
   </div>
 </template>
